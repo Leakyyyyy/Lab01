@@ -10,8 +10,7 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int Goro[2][2], Amnam1, Amnam2, Badabum1, Badabum2;
     for(int numberRowIndex=0; numberRowIndex<2; numberRowIndex++) {
       for(int numberCloumnIndex=0; numberCloumnIndex<2; numberCloumnIndex++) {
