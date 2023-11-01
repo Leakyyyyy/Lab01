@@ -13,20 +13,16 @@ using namespace std;
 int main()
 {
     int Goro[2][2], Amnam1, Amnam2, Badabum1, Badabum2;
-    cout << "Введите число для Goro (1,1)" << endl;
-    cin >> Goro[0][0];
-    cout << "Введите число для Goro (1,2)" << endl;
-    cin >> Goro[0][1];
-    cout << "Введите число для Goro (2,1)" << endl;
-    cin >> Goro[1][0];
-    cout << "Введите число для Goro (2,2)" << endl;
-    cin >> Goro[1][1];
-
+    for(int numberRowIndex=0; numberRowIndex<2; numberRowIndex++) {
+      for(int numberCloumnIndex=0; numberCloumnIndex<2; numberCloumnIndex++) {
+        cout << "Введите число для Goro (" << numberRowIndex+1 << "," << numberCloumnIndex+1 << ")" << endl;
+        cin >> Goro[numberRowIndex][numberCloumnIndex];
+    }
+}
     if (Goro[0][0]>Goro[1][1]) { 
         Amnam1 = Goro[0][0];
         Badabum1 = Goro[1][1];
-    }
-    else {
+    } else {
         Amnam1 = Goro[1][1];
         Badabum1 = Goro[0][0];
     }
@@ -34,15 +30,14 @@ int main()
     if (Goro[0][1]>Goro[1][0]) { 
         Amnam2 = Goro[0][1];
         Badabum2 = Goro[1][0];
-    }
-    else {
+    } else {
         Amnam2 = Goro[1][0];
         Badabum2 = Goro[0][1];
     }
 
-    for (int jim = 0; jim < 2; jim++) {
-        for (int imp = 0; imp < 2; imp++) { 
-           cout << Goro[jim][imp] << " ";
+    for (int numberRowIndex = 0; numberRowIndex < 2; numberRowIndex++) {
+        for (int numberCloumnIndex = 0; numberCloumnIndex < 2; numberCloumnIndex++) { 
+           cout << Goro[numberRowIndex][numberCloumnIndex] << " ";
         }
         cout << endl;
     }
